@@ -8,20 +8,10 @@
 
 using namespace std;
 
+
 unsigned short score = 0;
 unsigned short highScore = 0;
-
-// TODO - NP - Try animating? Have another grid of vectors for tile speed
-//             The tiles moves that far every frame unless there's a tile in its
-//             way, in which case it either combines and hides or stops moving.
-//
-//             Also need to add game-over testing and message
-
 unsigned short grid[4][4];
-//struct cellCoord {
-//	unsigned char x;
-//	unsigned char y;
-//};
 
 sf::Font font;
 sf::Color windowBGColour(250, 248, 239, 255);
@@ -351,25 +341,21 @@ int main() {
 
 	// Set up the title text
 	titleText.setStyle(sf::Text::Bold);
-	//titleText.setColor(sf::Color(237, 194, 46, 255));
 	titleText.setPosition(sf::Vector2f(10, 25));
 
 	// Set up the score text objects
 	scoreText.setStyle(sf::Text::Bold);
-    //scoreText.setColor(sf::Color(237, 194, 46, 255));
-	//scoreDecoratorText.setColor(sf::Color::Black);
-
+      
 	// Set up the tile text
 	tileText.setFont(font);
 	tileText.setCharacterSize(32);
 	tileText.setStyle(sf::Text::Bold);
-	//tileText.setColor(textColour);
+	
 
 	// Set up the game over display
 	gameOverBackground.setFillColor(sf::Color(250, 248, 239, 175));
 	gameOverBackground.setPosition(sf::Vector2f(10, 110));
 	gameOverText.setStyle(sf::Text::Bold);
-	//gameOverText.setColor(sf::Color::Black);
 	gameOverText.setPosition(sf::Vector2f(60, 265));
 
 	// Reset to start fresh
