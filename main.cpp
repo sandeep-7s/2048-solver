@@ -8,9 +8,11 @@
 
 using namespace std;
 
-
 unsigned short score = 0;
 unsigned short highScore = 0;
+
+
+
 unsigned short grid[4][4];
 
 sf::Font font;
@@ -341,21 +343,25 @@ int main() {
 
 	// Set up the title text
 	titleText.setStyle(sf::Text::Bold);
+	titleText.setFillColor(sf::Color::Black);
 	titleText.setPosition(sf::Vector2f(10, 25));
 
 	// Set up the score text objects
 	scoreText.setStyle(sf::Text::Bold);
-      
+    scoreText.setFillColor(sf::Color::Black);
+	scoreDecoratorText.setFillColor(sf::Color::Black);
+
 	// Set up the tile text
 	tileText.setFont(font);
 	tileText.setCharacterSize(32);
 	tileText.setStyle(sf::Text::Bold);
-	
+	tileText.setFillColor(sf::Color::Black);
 
 	// Set up the game over display
 	gameOverBackground.setFillColor(sf::Color(250, 248, 239, 175));
 	gameOverBackground.setPosition(sf::Vector2f(10, 110));
 	gameOverText.setStyle(sf::Text::Bold);
+	gameOverText.setFillColor(sf::Color::Black);
 	gameOverText.setPosition(sf::Vector2f(60, 265));
 
 	// Reset to start fresh
