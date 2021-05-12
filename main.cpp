@@ -18,7 +18,7 @@ unsigned short grid[4][4];
 sf::Font font;
 sf::Color windowBGColour(250, 248, 239, 255);
 sf::Color gridBGColour(187, 173, 160, 255);
-sf::Color textColour(67, 53, 40, 255);
+
 map<int, sf::Color> numberColours;
 
 float padding = 10.f;
